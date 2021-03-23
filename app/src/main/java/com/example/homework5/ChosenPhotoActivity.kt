@@ -1,14 +1,19 @@
 package com.example.homework5
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.airbnb.lottie.LottieAnimationView
 import com.example.homework5.R.drawable.image1
+
 
 class ChosenPhotoActivity : AppCompatActivity() {
 
@@ -37,7 +42,6 @@ class ChosenPhotoActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         photo.setImageResource(intent.getIntExtra("photo", image1))
-
         lottieLike.setOnClickListener {
             if (isCheckedDone) {
                 lottieLike.speed = -3f
@@ -53,10 +57,12 @@ class ChosenPhotoActivity : AppCompatActivity() {
         }
 
         lottieBookmark.setOnClickListener {
+
             if (isCheckedDoneForBookmark) {
                 lottieBookmark.speed = -3f
                 lottieBookmark.playAnimation()
                 isCheckedDoneForBookmark = false
+
             } else {
                 lottieBookmark.speed = 3f
                 lottieBookmark.playAnimation()
@@ -67,5 +73,6 @@ class ChosenPhotoActivity : AppCompatActivity() {
         commentsIcon.setOnClickListener {
             commentsLayout.visibility = View.VISIBLE
         }
+
     }
 }

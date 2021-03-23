@@ -20,7 +20,6 @@
 
     </com.makeramen.roundedimageview.RoundedImageView>
 
-
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie_like"
         android:layout_width="101dp"
@@ -159,6 +158,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/photo_cap"
         app:lottie_rawRes="@raw/lottie_bookmark" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
