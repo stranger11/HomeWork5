@@ -2,20 +2,102 @@
 <resources>
     
     <style name="ProfileText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">@font/new_font</item>
+    </style>
+
+    <style name="ButtonMenu">
+        <item name="android:layout_width">39dp</item>
+        <item name="android:layout_height">31dp</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="backgroundTint">#000000</item>
+        <item name="android:background">@drawable/ic_progile_menu</item>
+    </style>
+
+    <style name="Profession">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:fontFamily">@font/new_font</item>
+        <item name="android:text">Captain America</item>
+    </style>
+
+    <style name="LinkText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:text">www.marvel.com</item>
+        <item name="android:autoLink">web</item>
+        <item name="android:linksClickable">true</item>
+        <item name="android:textColorLink">@color/purple_700</item>
     </style>
 
     <style name="CountText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">@font/new_font</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">24sp</item>
+        <item name="android:layout_marginTop">24dp</item>
     </style>
 
     <style name="InfoText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">@font/new_font</item>
         <item name="android:textSize">20sp</item>
     </style>
-    
-    
+
+    <style name="ButtonFollow">
+        <item name="android:layout_width">276dp</item>
+        <item name="android:layout_height">43dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="backgroundTint">#E42B2B</item>
+        <item name="android:text">Follow</item>
+    </style>
+
+    <style name="ButtonTelegram">
+        <item name="android:layout_width">59dp</item>
+        <item name="android:layout_height">39dp</item>
+        <item name="backgroundTint">#2798F1</item>
+        <item name="android:layout_marginTop">52dp</item>
+        <item name="icon">@drawable/ic_telegram</item>
+        <item name="iconTint">#FFFFFF</item>
+    </style>
+
+    <style name="Line">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:background">#6A6969</item>
+    </style>
+
+    <style name="Photo">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">500dp</item>
+        <item name="android:src">@drawable/image1</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="riv_corner_radius">20dp</item>
+    </style>
+
+    <style name="LottieLike">
+        <item name="android:layout_width">101dp</item>
+        <item name="android:layout_height">103dp</item>
+        <item name="android:layout_marginTop">472dp</item>
+        <item name="lottie_rawRes">@raw/lottie_like</item>
+    </style>
+
+    <style name="CountOfLikes">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:text">94</item>
+    </style>
+
 </resources>

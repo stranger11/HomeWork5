@@ -1,6 +1,7 @@
 package com.example.homework5
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -17,7 +18,6 @@ import com.example.homework5.R.drawable.image1
 
 class ChosenPhotoActivity : AppCompatActivity() {
 
-    private lateinit var photo: ImageView
     private lateinit var likesCount: TextView
     private var isCheckedDone = false
     private var isCheckedDoneForBookmark = false
@@ -27,11 +27,16 @@ class ChosenPhotoActivity : AppCompatActivity() {
     private lateinit var commentsIcon: View
     private var countLikes = 94
     private var countLikesPlus = 95
+    private lateinit var image: AppCap
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.Theme_MyTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chosen_photo)
-        photo = findViewById(R.id.photo_cap)
+
+        image = intent.getSerializableExtra(EXTRA_IMAGE) as AppCap
+        findViewById<ImageView>(R.id.photo_cap).setImageResource(image.image)
+
         lottieLike = findViewById(R.id.lottie_like)
         likesCount = findViewById(R.id.count_likes)
         lottieBookmark = findViewById(R.id.lottie_bookmark)
@@ -39,9 +44,19 @@ class ChosenPhotoActivity : AppCompatActivity() {
         commentsIcon = findViewById(R.id.comments_icon)
     }
 
+    companion object {
+
+        private const val EXTRA_IMAGE = "EXTRA_IMAGE"
+
+        fun getStartIntent(context: Context, image: AppCap) =
+                Intent(context, ChosenPhotoActivity::class.java).apply {
+                    putExtra(EXTRA_IMAGE, image)
+                }
+    }
+
     override fun onStart() {
         super.onStart()
-        photo.setImageResource(intent.getIntExtra("photo", image1))
+
         lottieLike.setOnClickListener {
             if (isCheckedDone) {
                 lottieLike.speed = -3f

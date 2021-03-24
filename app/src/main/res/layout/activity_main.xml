@@ -10,9 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="720dp"
         android:id="@+id/fragment_container">
+
     </androidx.core.widget.NestedScrollView>
 
+
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_add"
